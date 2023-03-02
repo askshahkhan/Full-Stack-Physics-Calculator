@@ -1,0 +1,8 @@
+from django.urls import path
+from calculator import views
+
+urlpatterns = [
+    path('', views.home, name = 'home'),
+    path('calc', views.calc),
+    path('about', views.about, name = 'about'),
+]

@@ -1,0 +1,191 @@
+{% extends "base.html" %} 
+
+{% block page_content %}
+
+{% load static %}
+<!-- 
+
+  Things Left to do on home page: 
+  - Fix animation for button so that it doesn't show up all white after hovering 
+  - Make animation for home, about, contact so line shows up underneath
+  - Change fonts for buttons, title, navbar
+  - Footer with LinkedIn, Github, Instagram? buttons 
+  - Javascript animation background (should be easy to see buttons)
+  
+  About Page:
+  - Info about site, and where to ask questions 
+  - Can have form asking to email me for any improvement or whatever
+  - 
+  - Social Media buttons 
+  - 
+ -->
+<div class="hello">
+<nav class="navbar navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{% url 'home' %}">Physics Calculator</a>
+    <nav class="nav nav-pills nav-justified justify-content-end">
+      <a class="nav-item nav-link active" href="{% url 'home' %}">Home</a> 
+      <a class="nav-item nav-link active" href="{% url 'about' %}">About</a>
+      <a class="nav-item nav-link active" href="#">Contact</a>
+    </nav>
+    <!-- <ul class="nav justify-content-end">
+      
+        <a class="nav-item nav-link active" href="#">Home</a>
+      
+      <li class="nav-item">
+        <a class="navbar-brand" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="navbar-brand" href="#">Contact</a>
+      </li>
+    </ul> -->
+  </div>
+  
+</nav>
+
+<div class="my-5">
+
+  <figure class="text-center">
+    <h1 class="display-1">Physics Calculator</h1>
+    <blockquote class="blockquote">
+      <p>Hey, my name is Ahmed. Here are some calculators you can use for various physics calculations.</p>
+    </blockquote>
+  </figure>
+
+</div>
+
+<div class="container">
+    <div class="row spacer">
+      <div class="col">
+        
+        <a href="{% url 'home' %}" class="btn btn-outline-dark btn-lg btn-block shadow-lg p-3 mb-5 bg-white rounded" role="button" aria-pressed="true">Acceleration Calculator</a>
+      </div>
+      <div class="col">
+        <a href="{% url 'home' %}" class="btn btn-outline-dark btn-lg btn-block shadow-lg p-3 mb-5 bg-white rounded" role="button" aria-pressed="true">Force Calculator</a>
+      </div>
+      <div class="col">
+        <a href="{% url 'home' %}" class="btn btn-outline-dark btn-lg btn-block shadow-lg p-3 mb-5 bg-white rounded" role="button" aria-pressed="true">Velocity Calculator</a>
+      </div>
+      <div class="col">
+        <a href="{% url 'home' %}" class="btn btn-outline-dark btn-lg btn-block shadow-lg p-3 mb-5 bg-white rounded" role="button" aria-pressed="true">Pressure Calculator</a>
+      </div> 
+    </div>
+    <div class="row spacer">
+      <div class="col">
+        <a href="{% url 'home' %}" class="btn btn-outline-dark btn-lg btn-block shadow-lg p-3 mb-5 bg-white rounded" role="button" aria-pressed="true">Friction Calculator</a>
+      </div>
+      <div class="col">
+        <a href="{% url 'home' %}" class="btn btn-outline-dark btn-lg btn-block shadow-lg p-3 mb-5 bg-white rounded" role="button" aria-pressed="true">Tension Calculator</a>
+      </div>
+      <div class="col">
+        <a href="{% url 'home' %}" class="btn btn-outline-dark btn-lg btn-block shadow-lg p-3 mb-5 bg-white rounded" role="button" aria-pressed="true">Work Calculator</a>
+      </div>
+      <div class="col">
+        <a href="{% url 'home' %}" class="btn btn-outline-dark btn-lg btn-block shadow-lg p-3 mb-5 bg-white rounded" role="button" aria-pressed="true">Stress Calculator</a>
+      </div> 
+    </div>
+    <div class="row spacer">
+      <div class="col">
+        <a href="{% url 'home' %}" class="btn btn-outline-dark btn-lg btn-block shadow-lg p-3 mb-5 bg-white rounded" role="button" aria-pressed="true">Torque Calculator</a>
+      </div>
+      <div class="col">
+        <a href="{% url 'home' %}" class="btn btn-outline-dark btn-lg btn-block shadow-lg p-3 mb-5 bg-white rounded" role="button" aria-pressed="true">Frequency Calculator</a>
+      </div>
+      <div class="col">
+        <a href="{% url 'home' %}" class="btn btn-outline-dark btn-lg btn-block shadow-lg p-3 mb-5 bg-white rounded" role="button" aria-pressed="true">Air Density Calculator</a>
+      </div>
+      <div class="col">
+        <a href="{% url 'home' %}" class="btn btn-outline-dark btn-lg btn-block shadow-lg p-3 mb-5 bg-white rounded" role="button" aria-pressed="true">Coulumb's Law Calculator</a>
+      </div> 
+    </div>
+    <div class="row spacer">
+      <div class="col">
+        <a href="{% url 'home' %}" class="btn btn-outline-dark btn-lg btn-block shadow-lg p-3 mb-5 bg-white rounded" role="button" aria-pressed="true">Hooke's Law Calculator</a>
+      </div>
+      <div class="col">
+        <a href="{% url 'home' %}" class="btn btn-outline-dark btn-lg btn-block shadow-lg p-3 mb-5 bg-white rounded" role="button" aria-pressed="true">Momentum Calculator</a>
+      </div>
+      <div class="col">
+        <a href="{% url 'home' %}" class="btn btn-outline-dark btn-lg btn-block shadow-lg p-3 mb-5 bg-white rounded" role="button" aria-pressed="true">Gravity Calculator</a>
+      </div>
+      <div class="col">
+        <a href="{% url 'home' %}" class="btn btn-outline-dark btn-lg btn-block shadow-lg p-3 mb-5 bg-white rounded" role="button" aria-pressed="true">Horsepower Calculator</a>
+      </div> 
+    </div>
+</div>
+</div>
+
+<style>
+  /* Your external css file will go here. This is just for testing :) */
+  
+  .btn-lg{
+    width: 250px;
+    height: 100px;
+    margin: 0 auto;
+    padding: 0;
+    display: inline-block;
+    line-height: 65px;
+    text-align: center;
+  }
+
+  .col {
+    height: 100px;
+  }
+
+  .my-5 {
+    background-image: url({% static "" %});
+    background-size: cover;
+    margin-top: 75 !important;
+    margin-bottom: 75 !important;
+  } 
+  
+  .spacer {
+    margin-top: 40px;
+    margin-bottom: 40px; /* define margin as you see fit */
+  }
+
+  
+
+
+</style>  
+ 
+
+
+
+
+
+<!-- <form action="calc">
+    <div class="row">
+        <div class="col-xl">
+          <div class="input-group input-group-lg mb-3">
+              <span class="input-group-text mw">vi</span>
+              <input type="text" class="form-control" name="vi" required>
+            </div>
+        </div>
+
+        <div class="col">
+          <div class="input-group input-group-lg mb-3">
+              <span class="input-group-text mw">vf</span>
+              <input type="text" class="form-control" name = "vf">
+            </div>
+          
+        </div>
+      
+        
+      <div class="col">
+        <div class="input-group input-group-lg mb-3">
+            <span class="input-group-text mw">time</span>
+            <input type="text" class="form-control" name="time">
+          </div>
+       
+      </div>
+      
+      <div class="row py-4">
+        <div class="col">
+            <input class="btn btn-primary btn-lg mw" type="submit" value="Submit">
+        </div>
+      </div>
+    </div>
+  </form>
+  </div> -->
+{% endblock %} 
